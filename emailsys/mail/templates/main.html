@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <a href="{% url 'mail' %}" ><h3>Add New mail</h3><span class="glyphicon glyphicon-plus"></span></a>
+    <h3>Exisiting emails</h3>
+        {%for i in list%}
+            {{i.mail}}
+            <hr>
+        {% endfor %}
+    <hr>
+    <a href="{% url "smail" %}">send IT!</a>
+{% endblock %}
